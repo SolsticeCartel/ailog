@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="triangleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="200" r="300" fill="#3b82f6" opacity="0.1" />
+  <circle cx="1000" cy="500" r="350" fill="#8b5cf6" opacity="0.1" />
+  
+  <!-- Logo -->
+  <polygon points="600,180 700,330 500,330" fill="url(#triangleGradient)" />
+  
+  <!-- Title -->
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="url(#titleGradient)">AILOG</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="480" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" fill="#e2e8f0">AI-Powered Blog Generator</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="530" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#94a3b8">Create simple, SEO-friendly content in seconds</text>
+</svg> 
