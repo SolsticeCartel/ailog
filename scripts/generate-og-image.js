@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { createCanvas, loadImage } = require('canvas');
-const { JSDOM } = require('jsdom');
 const { Resvg } = require('@resvg/resvg-js');
 
 async function convertSvgToPng() {
