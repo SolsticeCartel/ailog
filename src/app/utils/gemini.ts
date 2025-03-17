@@ -2,9 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize the Gemini API with the API key from environment variables
 const API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY || "";
-if (!API_KEY) {
-  console.error("Gemini API key is not set. Please set NEXT_PUBLIC_GEMINI_API_KEY in your environment variables.");
-}
+// Silent initialization for production
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 export interface BlogPost {
@@ -14,11 +12,6 @@ export interface BlogPost {
 
 export async function generateBlogPost(prompt: string): Promise<BlogPost> {
   try {
-    // Check if API key is available
-    if (!API_KEY) {
-      throw new Error("Gemini API key is not set. Please set NEXT_PUBLIC_GEMINI_API_KEY in your environment variables.");
-    }
-
     // Use the Gemini 2.0 Flash model
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
