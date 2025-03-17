@@ -1,0 +1,7 @@
+Update Gemini model to 2.0 Flash and improve security
+
+This commit:
+- Updates the Gemini model from gemini-pro to gemini-2.0-flash
+- Removes debug component from live site
+- Removes excessive API key logging for better security
+- Simplifies error handling in the Gemini API integration 

@@ -102,11 +102,12 @@ If needed, you can further use the `web_scraper.py` file to scrape the web page 
 - When using seaborn styles in matplotlib, use 'seaborn-v0_8' instead of 'seaborn' as the style name due to recent seaborn version changes
 - Use 'gpt-4o' as the model name for OpenAI's GPT-4 with vision capabilities
 - When searching for recent news, use the current year (2025) instead of previous years, or simply use the "recent" keyword to get the latest information
-- For Google Generative AI, use 'gemini-1.5-flash' as the model name for Gemini 2.0 Flash model
+- For Google Generative AI, use 'gemini-2.0-flash' as the model name for Gemini 2.0 Flash model
 - In Next.js 14+, themeColor metadata should be moved from the metadata export to the viewport export to avoid warnings
 - When working with environment variables in Next.js, use NEXT_PUBLIC_ prefix for client-side variables
 - For better SEO, include comprehensive metadata with Open Graph and Twitter cards
 - Always secure API keys by using environment variables and never commit them to the repository
+- Remove debug components and excessive logging from production deployments to enhance security
 
 # Scratchpad
 
@@ -166,6 +167,11 @@ Create a minimalist and visually appealing website that uses the Gemini Free API
   [X] Create comprehensive README.md
   [X] Secure API keys with environment variables
   [X] Prepare repository for GitHub push
+[X] Security Enhancements:
+  [X] Remove debug component from live site
+  [X] Update Gemini model to use 2.0 Flash
+  [X] Remove excessive API key logging
+  [X] Simplify error handling in the Gemini API integration
 
 ### API Key
 - Gemini API Key: Stored securely in .env.local file (replaced with placeholder for GitHub)
