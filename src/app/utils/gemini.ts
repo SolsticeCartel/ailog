@@ -55,12 +55,14 @@ export async function generateBlogPost(prompt: string): Promise<BlogPost> {
     const text = response.text();
 
     // Parse the response to extract the title and content
-    const titleMatch = text.match(/TITLE:\s*(.*?)(?=\n\n|\n[^A-Z]|$)/s);
-    const title = titleMatch ? titleMatch[1].trim() : "Generated Blog Post";
+    // Using a regex that doesn't require the 's' flag (dotAll)
+    const titleMatch = text.match(/TITLE:\s*(.*?)(?=\n\n|\n[^A-Z]|$)/) || 
+                       text.split('\n').find(line => line.startsWith('TITLE:'))?.match(/TITLE:\s*(.*)/);
+    const title = titleMatch ? (titleMatch[1] || '').trim() : "Generated Blog Post";
     
     // Get the content after the title
     let content = text;
-    if (titleMatch) {
+    if (titleMatch && titleMatch[0]) {
       const titleEndIndex = text.indexOf(titleMatch[0]) + titleMatch[0].length;
       content = text.substring(titleEndIndex).trim();
     }
