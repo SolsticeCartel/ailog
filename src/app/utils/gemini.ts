@@ -14,8 +14,13 @@ export interface BlogPost {
 
 export async function generateBlogPost(prompt: string): Promise<BlogPost> {
   try {
+    // Check if API key is available
+    if (!API_KEY) {
+      throw new Error("Gemini API key is not set. Please set NEXT_PUBLIC_GEMINI_API_KEY in your environment variables.");
+    }
+
     // Use the Gemini 2.0 Flash model
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const systemPrompt = `
       You are a professional blog writer. Create a well-structured blog post based on the user's input.

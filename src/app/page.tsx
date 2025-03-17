@@ -5,6 +5,7 @@ import { ThemeToggle } from "./components/theme-toggle";
 import { LoadingSpinner } from "./components/loading-spinner";
 import { CopyButton } from "./components/copy-button";
 import { BlogContent } from "./components/blog-content";
+import { ApiDebug } from "./components/api-debug";
 import { generateBlogPost, BlogPost } from "./utils/gemini";
 import Head from "next/head";
 import Script from "next/script";
@@ -115,6 +116,9 @@ export default function Home() {
                       required
                       aria-label="Blog topic input"
                     />
+                    
+                    {/* API Debug Component */}
+                    <ApiDebug />
                   </div>
                 </div>
                 <div className="flex gap-4">
