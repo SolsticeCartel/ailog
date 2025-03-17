@@ -9,8 +9,6 @@ interface BlogContentProps {
 }
 
 export function BlogContent({ content }: BlogContentProps) {
-  if (!content) return null;
-  
   const contentRef = useRef<HTMLDivElement>(null);
   const [showTooltip, setShowTooltip] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -33,6 +31,8 @@ export function BlogContent({ content }: BlogContentProps) {
     }
   };
 
+  if (!content) return null;
+  
   // Process content to reduce empty lines
   const processedContent = content
     .split('\n')
