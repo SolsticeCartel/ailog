@@ -2,7 +2,7 @@
 
 AILOG is a modern, minimalist web application that uses Google's Gemini 2.0 Flash AI model to generate well-structured, SEO-friendly blog posts in simple, easy-to-understand English.
 
-![AILOG Screenshot](public/og-image.png)
+![AILOG Screenshot](public/og-image.svg)
 
 ## Features
 

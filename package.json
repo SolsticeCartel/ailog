@@ -6,15 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "generate-images": "node scripts/generate-og-image.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
-    "@resvg/resvg-js": "^2.6.0",
     "@tailwindcss/typography": "^0.5.16",
-    "canvas": "^2.11.2",
-    "jsdom": "^24.0.0",
     "next": "15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
