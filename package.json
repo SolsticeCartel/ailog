@@ -11,7 +11,7 @@
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
     "@tailwindcss/typography": "^0.5.16",
-    "next": "15.2.2",
+    "next": "15.5.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -22,7 +22,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.2.2",
+    "eslint-config-next": "15.5.11",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
