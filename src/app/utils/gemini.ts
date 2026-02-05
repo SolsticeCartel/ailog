@@ -13,7 +13,7 @@ export interface BlogPost {
 export async function generateBlogPost(prompt: string): Promise<BlogPost> {
   try {
     // Use the Gemini 2.0 Flash model
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const systemPrompt = `
       You are a professional blog writer. Create a well-structured blog post based on the user's input.
